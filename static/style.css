@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 16px;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+}
+
+h1 {
+    color: #243b64;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.description {
+    text-align: center;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 170px;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#analyzeButton {
+    flex: 1;
+    color: white;
+    background: #4f46e5;
+}
+
+#analyzeButton:hover {
+    background: #4338ca;
+}
+
+#clearButton {
+    color: #334155;
+    background: #e2e8f0;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#result {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#result:empty {
+    display: none;
+}
+
+#result.positive {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+#result.negative {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+#result.error {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 15px auto;
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
